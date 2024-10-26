@@ -52,7 +52,7 @@ function Navbar() {
         <ul
           className="capitalize md:uppercase flex flex-col md:flex-row 
         bg-gradient-to-b to-customlightgray from-0% from-[#FEFCF7] to-[55.94%] md:bg-none
-        justify-start items-center mt-16 md:mt-0 h-[100vh] md:h-full text-[#333D4B] md:text-[#83888F] font-[900] md:font-[700] leading-[15px] text-2xl md:text-[12px] gap-8
+        justify-start items-center pt-16 md:pt-0 h-[100vh] md:h-full text-[#333D4B] md:text-[#83888F] font-[900] md:font-[700] leading-[15px] text-2xl md:text-[12px] gap-8
         ">
           <li className="">
             <Link to="/">home</Link>
