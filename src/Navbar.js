@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const [style, setStyle] = useState("hidden md:block");
+
+  const toggleNav = () => {
+    if (style !== "hidden md:block") setStyle("hidden md:block");
+    else setStyle("block md:hidden");
+  };
+
   return (
-    <header>
-      <div>
+    <header className=" h-[90px] flex flex-col md:flex-row py-8 font-fraunces md:font-barlow md:justify-between">
+      <div className="flex justify-between">
         <svg
+          className="my-auto mx-0"
           xmlns="http://www.w3.org/2000/svg"
           width="236"
           height="26"
@@ -25,6 +33,8 @@ function Navbar() {
           />
         </svg>
         <svg
+          onClick={toggleNav}
+          className="my-auto mx-0 md:hidden"
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="15"
@@ -38,13 +48,17 @@ function Navbar() {
           />
         </svg>
       </div>
-      <nav>
-        <ul className="uppercase">
+      <nav className={style}>
+        <ul
+          className="capitalize md:uppercase flex flex-col md:flex-row 
+        bg-gradient-to-b to-customlightgray from-0% from-[#FEFCF7] to-[55.94%] md:bg-none
+        justify-start items-center mt-16 md:mt-0 h-[100vh] md:h-full text-[#333D4B] md:text-[#83888F] font-[900] md:font-[700] leading-[15px] text-2xl md:text-[12px] gap-8
+        ">
           <li className="">
             <Link to="/">home</Link>
           </li>
           <li>
-            <Link to="/about">about us</Link>=
+            <Link to="/about">about us</Link>
           </li>
           <li>
             <Link to="/createplan">create your plan</Link>
