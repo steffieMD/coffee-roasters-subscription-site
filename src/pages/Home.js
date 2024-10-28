@@ -106,7 +106,7 @@ const Home = () => {
               />
             </svg>
 
-            <h3 className="mb-6 text-2xl font-black font-fraunces leading-loose">
+            <h3 className="mb-6 text-2xl font-black font-fraunces ">
               Best quality
             </h3>
             <p className="text-[15px] font-barlow leading-[25px] mx-8">
@@ -116,6 +116,7 @@ const Home = () => {
           </div>
           <div className="bg-bluelagoon rounded-lg pt-[72px] pb-[51px] flex flex-col justify-center items-center">
             <svg
+              className="mb-14"
               width="72"
               height="72"
               viewBox="0 0 72 72"
@@ -129,16 +130,17 @@ const Home = () => {
               />
             </svg>
 
-            <h3 className="mb-6 text-2xl font-black font-fraunces leading-loose">
-              Best quality
+            <h3 className="mb-6 text-2xl font-black font-fraunces ">
+              Exclusive benefits
             </h3>
             <p className="text-[15px] font-barlow leading-[25px] mx-8">
-              Discover an endless variety of the world’s best artisan coffee
-              from each of our roasters.
+              Special offers and swag when you subscribe, including 30% off your
+              first shipment.
             </p>
           </div>
-          <div className="bg-bluelagoon rounded-lg pt-[72px] pb-[51px] flex flex-col justify-center items-center">
+          <div className="bg-bluelagoon rounded-lg pt-[83px] pb-[48px] flex flex-col justify-center items-center">
             <svg
+              className="mb-[67px]"
               width="72"
               height="50"
               viewBox="0 0 72 50"
@@ -153,13 +155,25 @@ const Home = () => {
               />
             </svg>
 
-            <h3 className="mb-6 text-2xl font-black font-fraunces leading-loose">
-              Best quality
+            <h3 className="mb-6 text-2xl font-black font-fraunces ">
+              Free shipping
             </h3>
             <p className="text-[15px] font-barlow leading-[25px] mx-8">
-              Discover an endless variety of the world’s best artisan coffee
-              from each of our roasters.
+              We cover the cost and coffee is delivered fast. Peak freshness:
+              guaranteed.
             </p>
+          </div>
+        </div>
+      </section>
+      <section className="mt-[689px] text-center">
+        <h2 className="text-[#83888f] text-2xl font-black  font-fraunces">
+          How it works
+        </h2>
+        <div>
+          <div>
+            <span></span>
+            <h3></h3>
+            <p></p>
           </div>
         </div>
       </section>
