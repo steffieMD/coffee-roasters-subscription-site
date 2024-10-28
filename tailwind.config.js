@@ -10,6 +10,7 @@ module.exports = {
         customdarkgrey: "#2C343E",
         customgrayishblue: "#333D4B",
         bluelagoon: "#0E8784",
+        customapricot: "#FDD6BA",
       },
       fontFamily: {
         fraunces: ["Fraunces", "sans-serif"],

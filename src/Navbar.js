@@ -19,7 +19,7 @@ function Navbar() {
       <div className="flex justify-between">
         <Link to="/">
           <svg
-            className="my-auto mx-0"
+            className="my-auto mx-0 cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
             width="236"
             height="26"

@@ -3,11 +3,12 @@ import granExpresso from "../assets/png/gran-expresso.png";
 import planalto from "../assets/png/planalto.png";
 import piccollo from "../assets/png/piccollo.png";
 import danche from "../assets/png/danche.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="">
-      <div className="bg-[url('/src/assets/png/hero-img-home.png')] text-customeggwhite py-[100px] px-6 bg-cover text-center rounded-[10px] bg-center isolate brightness-50 ">
+    <div className="flex flex-col items-center justify-center">
+      <div className="bg-[url('/src/assets/png/hero-img-home.png')] text-customeggwhite py-[100px] px-6 bg-cover text-center rounded-[10px] bg-center isolate brightness-50">
         <h1 className="pb-6 font-fraunces text-[40px] font-[900] leading-10">
           Great coffee made simple.
         </h1>
@@ -169,14 +170,53 @@ const Home = () => {
         <h2 className="text-[#83888f] text-2xl font-black  font-fraunces">
           How it works
         </h2>
-        <div>
-          <div>
-            <span></span>
-            <h3></h3>
-            <p></p>
+        <div className="my-20 flex flex-col gap-14">
+          <div className="flex flex-col gap-6 text-customgrayishblue">
+            <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px]">
+              01
+            </span>
+            <h3 className="text-[28px] font-black font-fraunces leading-loose">
+              Pick your coffee
+            </h3>
+            <p className="text-[15px] font-barlow leading-[25px]">
+              Select from our evolving range of artisan coffees. Our beans are
+              ethically sourced and we pay fair prices for them. There are new
+              coffees in all profiles every month for you to try out.
+            </p>
+          </div>
+          <div className="flex flex-col gap-6 text-customgrayishblue">
+            <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px]">
+              02
+            </span>
+            <h3 className="text-[28px] font-black font-fraunces leading-loose">
+              Choose the frequency
+            </h3>
+            <p className="text-[15px] font-barlow leading-[25px]">
+              Customize your order frequency, quantity, even your roast style
+              and grind type. Pause, skip or cancel your subscription with no
+              commitment through our online portal.
+            </p>
+          </div>
+          <div className="flex flex-col gap-6 text-customgrayishblue">
+            <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px]">
+              03
+            </span>
+            <h3 className="text-[28px] font-black font-fraunces leading-loose">
+              Receive and enjoy!
+            </h3>
+            <p className="text-[15px] font-barlow leading-[25px]">
+              We ship your package within 48 hours, freshly roasted. Sit back
+              and enjoy award-winning world-class coffees curated to provide a
+              distinct tasting experience.
+            </p>
           </div>
         </div>
       </section>
+      <Link
+        to="/createplan"
+        className="cursor-pointer bg-bluelagoon rounded-md px-[31px] pt-[15px] pb-[16px] text-customeggwhite text-lg font-black font-fraunces leading-[25px]">
+        Create your plan
+      </Link>
     </div>
   );
 };
