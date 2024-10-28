@@ -8,79 +8,97 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="bg-[url('/src/assets/png/hero-img-home.png')] text-customeggwhite py-[100px] px-6 bg-cover text-center rounded-[10px] bg-center isolate brightness-50">
-        <h1 className="pb-6 font-fraunces text-[40px] font-[900] leading-10">
-          Great coffee made simple.
-        </h1>
-        <p className="font-barlow text-[15px] leading-[25px] pb-[39px]">
-          Start your mornings with the world’s best coffees. Try our expertly
-          curated artisan coffees from our best roasters delivered directly to
-          your door, at your schedule.
-        </p>
-        <button className="bg-[#0E8784] px-[31px] pt-[15px] pb-[16px] rounded-md font-fraunces text-lg font-[900]">
-          Create your plan
-        </button>
+      <div className="bg-[url('/src/assets/png/hero-img-home.png')] text-customeggwhite py-[100px] px-6 bg-cover text-center rounded-[10px] bg-center isolate brightness-50 md:filter-none md:px-[58px] h-[500px]">
+        <div className="md:w-[65%] md:text-left">
+          <h1 className="pb-6 font-fraunces text-[40px] md:text-5xl font-[900] leading-[48px]">
+            Great coffee made simple.
+          </h1>
+          <p className="font-barlow text-[15px] leading-[25px] pb-[39px]">
+            Start your mornings with the world’s best coffees. Try our expertly
+            curated artisan coffees from our best roasters delivered directly to
+            your door, at your schedule.
+          </p>
+          <button className="bg-[#0E8784] px-[31px] pt-[15px] pb-[16px] rounded-md font-fraunces text-lg font-[900]">
+            Create your plan
+          </button>
+        </div>
       </div>
-      <section className="my-[120px] text-center text-[#333D4B]">
-        <h2 className="text-transparent bg-clip-text bg-gradient-to-b from-[#83888F] from-0% to-cutext-customeggwhite to-100% font-fraunces text-[40px] font-[900] leading-[72px] mb-[13px]">
+      <section className="my-[120px] md:my-[144px] text-center text-[#333D4B]">
+        <h2 className="text-transparent bg-clip-text bg-gradient-to-b from-[#83888F] from-0% to-customeggwhite to-100% font-fraunces text-[40px] md:text-[110px] font-[900] leading-[72px] mb-[13px] md:relative md:top-[54px] md:-z-10">
           our collection
         </h2>
-        <div className="flex flex-col gap-12">
-          <div>
+        <div className="flex flex-col gap-12 md:px-[58px] md:text-left md:gap-8">
+          <div className="flex">
             <img
               src={granExpresso}
               className="w-[53%] my-0 mx-auto mb-6"
               alt="A pack of gran expresso"
             />
-            <h3 className="font-fraunces text-2xl font-[900] mb-4">
-              Gran Espresso
-            </h3>
-            <p className="text-customgrayishblue text-[15px] font-['Barlow'] leading-[25px]">
-              Light and flavorful blend with cocoa and black pepper for an
-              intense experience
-            </p>
+            <div className="md:mt-[30px]">
+              <h3 className="font-fraunces text-2xl font-[900] mb-4 md:mb-6">
+                Gran Espresso
+              </h3>
+              <p className="text-customgrayishblue text-[15px] font-['Barlow'] leading-[25px]">
+                Light and flavorful blend with cocoa and black pepper for an
+                intense experience
+              </p>
+            </div>
           </div>
-          <div>
+          <div className="md:flex">
             <img
               src={planalto}
               className="w-[53%] my-0 mx-auto mb-6"
               alt="A pack of Planalto"
             />
-            <h3 className="font-fraunces text-2xl font-[900] mb-4">Planalto</h3>
-            <p className="text-customgrayishblue text-[15px] font-['Barlow'] leading-[25px]">
-              Brazilian dark roast with rich and velvety body, and hints of
-              fruits and nuts
-            </p>
+            <div className="md:mt-[30px]">
+              <h3 className="font-fraunces text-2xl font-[900] mb-4 md:mb-6">
+                Planalto
+              </h3>
+              <p className="text-customgrayishblue text-[15px] font-['Barlow'] leading-[25px]">
+                Brazilian dark roast with rich and velvety body, and hints of
+                fruits and nuts
+              </p>
+            </div>
           </div>
-          <div>
+          <div className="md:flex">
             <img
               src={piccollo}
               className="w-[53%] my-0 mx-auto mb-6"
               alt="A pack of Piccollo"
             />
-            <h3 className="font-fraunces text-2xl font-[900] mb-4">Piccollo</h3>
-            <p className="text-customgrayishblue text-[15px] font-['Barlow'] leading-[25px]">
-              Mild and smooth blend featuring notes of toasted almond and dried
-              cherry{" "}
-            </p>
+            <div className="md:mt-[30px]">
+              <h3 className="font-fraunces text-2xl font-[900] mb-4 md:mb-6">
+                Piccollo
+              </h3>
+              <p className="text-customgrayishblue text-[15px] font-['Barlow'] leading-[25px]">
+                Mild and smooth blend featuring notes of toasted almond and
+                dried cherry{" "}
+              </p>
+            </div>
           </div>
-          <div>
+          <div className="md:flex">
             <img
               src={danche}
               className="w-[53%] my-0 mx-auto mb-6"
               alt="A pack of Danche"
             />
-            <h3 className="font-fraunces text-2xl font-[900] mb-4">Danche</h3>
-            <p className="text-customgrayishblue text-[15px] font-['Barlow'] leading-[25px]">
-              Ethiopian hand-harvested blend densely packed with vibrant fruit
-              notes
-            </p>
+            <div className="md:mt-[30px]">
+              <h3 className="font-fraunces text-2xl font-[900] mb-4 md:mb-6">
+                Danche
+              </h3>
+              <p className="text-customgrayishblue text-[15px] font-['Barlow'] leading-[25px] ">
+                Ethiopian hand-harvested blend densely packed with vibrant fruit
+                notes
+              </p>
+            </div>
           </div>
         </div>
       </section>
-      <section className="bg-customdarkgrey rounded-[10px] px-6 pt-16 text-center h-[902px] text-customeggwhite">
-        <div className="mb-16">
-          <h2 className="text-[28px] font-black font-fraunces leading-7 mb-6">
+      <section className="bg-customdarkgrey rounded-[10px] px-6 pt-16 text-center h-[902px] md:h-[573px] text-customeggwhite">
+        <div className="mb-16 md:mb-[70px]">
+          <h2
+            className="text-[28px] md:text-[32px] md:leading-[48px]
+         font-black font-fraunces leading-7 mb-6">
             Why choose us?
           </h2>
           <p className="text-[15px] font-barlow leading-[25px] font-normal">
@@ -90,10 +108,10 @@ const Home = () => {
             level.
           </p>
         </div>
-        <div className="flex flex-col gap-6">
-          <div className="bg-bluelagoon rounded-lg pt-[72px] pb-[51px] flex flex-col justify-center items-center">
+        <div className="flex flex-col gap-6 md:text-left">
+          <div className="bg-bluelagoon rounded-lg pt-[72px] pb-[51px] flex flex-col justify-center items-center md:flex-row md:pl-[70px] md:pr-[48px]">
             <svg
-              className="mb-14"
+              className="mb-14 md:w-[56px] md:h-[56px]"
               width="73"
               height="72"
               viewBox="0 0 73 72"
@@ -106,18 +124,19 @@ const Home = () => {
                 fill="#FDD6BA"
               />
             </svg>
-
-            <h3 className="mb-6 text-2xl font-black font-fraunces ">
-              Best quality
-            </h3>
-            <p className="text-[15px] font-barlow leading-[25px] mx-8">
-              Discover an endless variety of the world’s best artisan coffee
-              from each of our roasters.
-            </p>
+            <div className="md:pl-[55px]">
+              <h3 className="mb-6 text-2xl font-black font-fraunces ">
+                Best quality
+              </h3>
+              <p className="text-[15px] font-barlow leading-[25px] mx-8 md:mx-0">
+                Discover an endless variety of the world’s best artisan coffee
+                from each of our roasters.
+              </p>
+            </div>
           </div>
-          <div className="bg-bluelagoon rounded-lg pt-[72px] pb-[51px] flex flex-col justify-center items-center">
+          <div className="bg-bluelagoon rounded-lg pt-[72px] pb-[51px] flex flex-col justify-center items-center md:flex-row md:pl-[70px] md:pr-[48px]">
             <svg
-              className="mb-14"
+              className="mb-14 md:w-[56px] md:h-[56px]"
               width="72"
               height="72"
               viewBox="0 0 72 72"
@@ -130,18 +149,19 @@ const Home = () => {
                 fill="#FDD6BA"
               />
             </svg>
-
-            <h3 className="mb-6 text-2xl font-black font-fraunces ">
-              Exclusive benefits
-            </h3>
-            <p className="text-[15px] font-barlow leading-[25px] mx-8">
-              Special offers and swag when you subscribe, including 30% off your
-              first shipment.
-            </p>
+            <div className="md:pl-[55px]">
+              <h3 className="mb-6 text-2xl font-black font-fraunces ">
+                Exclusive benefits
+              </h3>
+              <p className="text-[15px] font-barlow leading-[25px] mx-8 md:mx-0">
+                Special offers and swag when you subscribe, including 30% off
+                your first shipment.
+              </p>
+            </div>
           </div>
-          <div className="bg-bluelagoon rounded-lg pt-[83px] pb-[48px] flex flex-col justify-center items-center">
+          <div className="bg-bluelagoon rounded-lg pt-[83px] pb-[48px] flex flex-col justify-center items-center md:flex-row md:pl-[70px] md:pr-[48px]">
             <svg
-              className="mb-[67px]"
+              className="mb-[67px] md:w-[55px] md:h-[39px]"
               width="72"
               height="50"
               viewBox="0 0 72 50"
@@ -155,14 +175,15 @@ const Home = () => {
                 fill="#FDD6BA"
               />
             </svg>
-
-            <h3 className="mb-6 text-2xl font-black font-fraunces ">
-              Free shipping
-            </h3>
-            <p className="text-[15px] font-barlow leading-[25px] mx-8">
-              We cover the cost and coffee is delivered fast. Peak freshness:
-              guaranteed.
-            </p>
+            <div className="md:pl-[55px]">
+              <h3 className="mb-6 text-2xl font-black font-fraunces ">
+                Free shipping
+              </h3>
+              <p className="text-[15px] font-barlow leading-[25px] mx-8 md:mx-0">
+                We cover the cost and coffee is delivered fast. Peak freshness:
+                guaranteed.
+              </p>
+            </div>
           </div>
         </div>
       </section>
