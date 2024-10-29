@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [style, setStyle] = useState("hidden md:block");
+  const [activeStyle, setActiveStyle] = useState(
+    "text-[#333D4B] md:text-[#83888F] hover:text-[#83888F] md:hover:text-customgrayishblue"
+  );
 
   const toggleNav = () => {
     if (style !== "hidden md:block") setStyle("hidden md:block");
@@ -62,13 +65,13 @@ function Navbar() {
         bg-gradient-to-b  from-0% from-customeggwhite to-customlightgray to-[55.95%] md:bg-none
         justify-start items-center pt-16 md:pt-0 h-[100vh] md:h-full text-[#333D4B] md:text-[#83888F] font-[900] md:font-[700] leading-[15px] text-2xl md:text-[12px] gap-8
         ">
-          <li className="">
+          <li className="hover:text-[#83888F] md:hover:text-customgrayishblue">
             <Link to="/">home</Link>
           </li>
-          <li>
+          <li className="hover:text-[#83888F] md:hover:text-customgrayishblue">
             <Link to="/about">about us</Link>
           </li>
-          <li>
+          <li className="hover:text-[#83888F] md:hover:text-customgrayishblue">
             <Link to="/createplan">create your plan</Link>
           </li>
         </ul>

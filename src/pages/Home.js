@@ -18,9 +18,11 @@ const Home = () => {
             curated artisan coffees from our best roasters delivered directly to
             your door, at your schedule.
           </p>
-          <button className="bg-[#0E8784] px-[31px] pt-[15px] pb-[16px] rounded-md font-fraunces text-lg font-[900]">
-            Create your plan
-          </button>
+          <Link to="/createplan">
+            <button className="bg-[#0E8784] px-[31px] pt-[15px] pb-[16px] rounded-md font-fraunces text-lg font-[900] hover:bg-hovergreen">
+              Create your plan
+            </button>
+          </Link>
         </div>
       </div>
       <section className="my-[120px] md:my-[144px] text-center text-[#333D4B]">
@@ -94,8 +96,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="bg-customdarkgrey rounded-[10px] px-6 pt-16 text-center h-[902px] md:h-[573px] text-customeggwhite">
-        <div className="mb-16 md:mb-[70px]">
+      <section className="bg-customdarkgrey rounded-[10px] px-6 pt-16 text-center h-[902px] md:h-[573px] text-customeggwhite md:px-[58px] md:pt-14">
+        <div className="mb-16 md:mb-[70px] md:mx-4">
           <h2
             className="text-[28px] md:text-[32px] md:leading-[48px]
          font-black font-fraunces leading-7 mb-6">
@@ -109,9 +111,9 @@ const Home = () => {
           </p>
         </div>
         <div className="flex flex-col gap-6 md:text-left">
-          <div className="bg-bluelagoon rounded-lg pt-[72px] pb-[51px] flex flex-col justify-center items-center md:flex-row md:pl-[70px] md:pr-[48px]">
+          <div className="bg-bluelagoon rounded-lg pt-[72px] pb-[51px] flex flex-col justify-center items-center md:flex-row md:pl-[70px] md:pr-[48px] md:py-[41px]">
             <svg
-              className="mb-14 md:w-[56px] md:h-[56px]"
+              className="mb-14 md:mb-0 md:w-[56px] md:h-[56px]"
               width="73"
               height="72"
               viewBox="0 0 73 72"
@@ -124,8 +126,9 @@ const Home = () => {
                 fill="#FDD6BA"
               />
             </svg>
+
             <div className="md:pl-[55px]">
-              <h3 className="mb-6 text-2xl font-black font-fraunces ">
+              <h3 className="mb-6 text-2xl font-black font-fraunces md:mb-4">
                 Best quality
               </h3>
               <p className="text-[15px] font-barlow leading-[25px] mx-8 md:mx-0">
@@ -134,9 +137,9 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="bg-bluelagoon rounded-lg pt-[72px] pb-[51px] flex flex-col justify-center items-center md:flex-row md:pl-[70px] md:pr-[48px]">
+          <div className="bg-bluelagoon rounded-lg pt-[72px] pb-[51px] flex flex-col justify-center items-center md:flex-row md:pl-[70px] md:pr-[48px] md:py-[41px]">
             <svg
-              className="mb-14 md:w-[56px] md:h-[56px]"
+              className="mb-14 md:mb-0 md:w-[56px] md:h-[56px]"
               width="72"
               height="72"
               viewBox="0 0 72 72"
@@ -150,7 +153,7 @@ const Home = () => {
               />
             </svg>
             <div className="md:pl-[55px]">
-              <h3 className="mb-6 text-2xl font-black font-fraunces ">
+              <h3 className="mb-6 text-2xl font-black font-fraunces md:mb-4">
                 Exclusive benefits
               </h3>
               <p className="text-[15px] font-barlow leading-[25px] mx-8 md:mx-0">
@@ -159,9 +162,9 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="bg-bluelagoon rounded-lg pt-[83px] pb-[48px] flex flex-col justify-center items-center md:flex-row md:pl-[70px] md:pr-[48px]">
+          <div className="bg-bluelagoon rounded-lg pt-[83px] pb-[48px] flex flex-col justify-center items-center md:flex-row md:pl-[70px] md:pr-[48px] md:py-[41px]">
             <svg
-              className="mb-[67px] md:w-[55px] md:h-[39px]"
+              className="mb-[67px] md:mb-0 md:w-[55px] md:h-[39px]"
               width="72"
               height="50"
               viewBox="0 0 72 50"
@@ -176,7 +179,7 @@ const Home = () => {
               />
             </svg>
             <div className="md:pl-[55px]">
-              <h3 className="mb-6 text-2xl font-black font-fraunces ">
+              <h3 className="mb-6 text-2xl font-black font-fraunces md:mb-4">
                 Free shipping
               </h3>
               <p className="text-[15px] font-barlow leading-[25px] mx-8 md:mx-0">
@@ -187,12 +190,14 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="mt-[689px] text-center">
+      <section className="mt-[689px] md:mt-[438px] text-center md:text-left">
         <h2 className="text-[#83888f] text-2xl font-black  font-fraunces">
           How it works
         </h2>
-        <div className="my-20 flex flex-col gap-14">
+        <div className="hidden md:block border-customapricot border-t-2 md:mt-[55px] w-[70%]"></div>
+        <div className="my-20 md:my-0 flex flex-col gap-1 md:flex-row">
           <div className="flex flex-col gap-6 text-customgrayishblue">
+            <div className=" hidden md:block border-2 rounded-full w-[31px] h-[31px] bg-customeggwhite border-bluelagoon relative bottom-4"></div>
             <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px]">
               01
             </span>
@@ -206,6 +211,7 @@ const Home = () => {
             </p>
           </div>
           <div className="flex flex-col gap-6 text-customgrayishblue">
+            <div className=" hidden md:block border-2 rounded-full w-[31px] h-[31px] bg-customeggwhite border-bluelagoon relative bottom-4"></div>
             <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px]">
               02
             </span>
@@ -219,6 +225,7 @@ const Home = () => {
             </p>
           </div>
           <div className="flex flex-col gap-6 text-customgrayishblue">
+            <div className=" hidden md:block border-2 rounded-full w-[31px] h-[31px] bg-customeggwhite border-bluelagoon relative bottom-4"></div>
             <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px]">
               03
             </span>
@@ -233,10 +240,10 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Link
-        to="/createplan"
-        className="cursor-pointer bg-bluelagoon rounded-md px-[31px] pt-[15px] pb-[16px] text-customeggwhite text-lg font-black font-fraunces leading-[25px]">
-        Create your plan
+      <Link to="/createplan">
+        <button className="bg-[#0E8784] px-[31px] pt-[15px] pb-[16px] rounded-md font-fraunces text-lg font-[900] text-customeggwhite hover:bg-hovergreen">
+          Create your plan
+        </button>
       </Link>
     </div>
   );

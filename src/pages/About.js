@@ -12,9 +12,6 @@ const About = () => {
           curated artisan coffees from our best roasters delivered directly to
           your door, at your schedule.
         </p>
-        <button className="bg-[#0E8784] px-[31px] pt-[15px] pb-[16px] rounded-md font-fraunces text-lg font-[900]">
-          Create your plan
-        </button>
       </div>
     </div>
   );
