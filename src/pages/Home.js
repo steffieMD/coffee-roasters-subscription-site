@@ -30,7 +30,7 @@ const Home = () => {
           our collection
         </h2>
         <div className="flex flex-col gap-12 md:px-[58px] md:text-left md:gap-8">
-          <div className="flex">
+          <div className="md:flex">
             <img
               src={granExpresso}
               className="w-[53%] my-0 mx-auto mb-6"
@@ -190,21 +190,21 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="mt-[689px] md:mt-[438px] text-center md:text-left">
+      <section className="mt-[689px] mb-[120px] md:mt-[438px] md:mb-[144px] text-center md:text-left">
         <h2 className="text-[#83888f] text-2xl font-black  font-fraunces">
           How it works
         </h2>
         <div className="hidden md:block border-customapricot border-t-2 md:mt-[55px] w-[70%]"></div>
-        <div className="my-20 md:my-0 flex flex-col gap-1 md:flex-row">
+        <div className="my-20 md:mt-0 md:mb-11 flex flex-col gap-1 md:gap-[10px] md:flex-row">
           <div className="flex flex-col gap-6 text-customgrayishblue">
             <div className=" hidden md:block border-2 rounded-full w-[31px] h-[31px] bg-customeggwhite border-bluelagoon relative bottom-4"></div>
             <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px]">
               01
             </span>
-            <h3 className="text-[28px] font-black font-fraunces leading-loose">
+            <h3 className="text-[28px] font-black font-fraunces leading-loose md:pr-[20px] md:leading-9">
               Pick your coffee
             </h3>
-            <p className="text-[15px] font-barlow leading-[25px]">
+            <p className="text-[15px] font-barlow leading-[25px] ">
               Select from our evolving range of artisan coffees. Our beans are
               ethically sourced and we pay fair prices for them. There are new
               coffees in all profiles every month for you to try out.
@@ -215,7 +215,7 @@ const Home = () => {
             <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px]">
               02
             </span>
-            <h3 className="text-[28px] font-black font-fraunces leading-loose">
+            <h3 className="text-[28px] font-black font-fraunces leading-loose md:pr-[20px] md:leading-9">
               Choose the frequency
             </h3>
             <p className="text-[15px] font-barlow leading-[25px]">
@@ -229,22 +229,22 @@ const Home = () => {
             <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px]">
               03
             </span>
-            <h3 className="text-[28px] font-black font-fraunces leading-loose">
+            <h3 className="text-[28px] font-black font-fraunces leading-loose md:pr-[20px] md:leading-9">
               Receive and enjoy!
             </h3>
-            <p className="text-[15px] font-barlow leading-[25px]">
+            <p className="text-[15px] font-barlow leading-[25px] ">
               We ship your package within 48 hours, freshly roasted. Sit back
               and enjoy award-winning world-class coffees curated to provide a
               distinct tasting experience.
             </p>
           </div>
         </div>
+        <Link to="/createplan" className="md:mr-auto">
+          <button className="bg-[#0E8784] px-[31px] pt-[15px] pb-[16px] rounded-md font-fraunces text-lg font-[900] text-customeggwhite hover:bg-hovergreen">
+            Create your plan
+          </button>
+        </Link>
       </section>
-      <Link to="/createplan">
-        <button className="bg-[#0E8784] px-[31px] pt-[15px] pb-[16px] rounded-md font-fraunces text-lg font-[900] text-customeggwhite hover:bg-hovergreen">
-          Create your plan
-        </button>
-      </Link>
     </div>
   );
 };
