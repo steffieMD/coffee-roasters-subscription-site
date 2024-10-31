@@ -8,12 +8,12 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="bg-[url('/src/assets/png/hero-img-home.png')] text-customeggwhite py-[100px] px-6 bg-cover text-center rounded-[10px] bg-center isolate brightness-50 md:filter-none md:px-[58px] h-[500px]">
-        <div className="md:w-[65%] md:text-left">
-          <h1 className="pb-6 font-fraunces text-[40px] md:text-5xl font-[900] leading-[48px]">
+      <div className="bg-[url('/src/assets/png/hero-img-home.png')] md:bg-[url('/src/assets/png/hero-img-home-tablet.png')] xl:bg-[url('/src/assets/png/hero-image-home-large.png')] text-customeggwhite py-[100px] px-6 text-center rounded-[10px] bg-cover bg-no-repeat isolate brightness-50 md:filter-none md:px-[58px] xl:w-full">
+        <div className="md:w-[65%] md:text-left xl:w-[50%] ">
+          <h1 className="pb-6 font-fraunces text-[40px] md:text-5xl font-[900] leading-[48px] xl:text-7xl xl:mb-8">
             Great coffee made simple.
           </h1>
-          <p className="font-barlow text-[15px] leading-[25px] pb-[39px]">
+          <p className="font-barlow text-[15px] leading-[25px] pb-[39px] xl:text-base xl:leading-relaxed xl:pb-14 xl:pr-28">
             Start your mornings with the world’s best coffees. Try our expertly
             curated artisan coffees from our best roasters delivered directly to
             your door, at your schedule.
@@ -25,15 +25,15 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <section className="my-[120px] md:my-[144px] text-center text-[#333D4B]">
-        <h2 className="text-transparent bg-clip-text bg-gradient-to-b from-[#83888F] from-0% to-customeggwhite to-100% font-fraunces text-[40px] md:text-[110px] font-[900] leading-[72px] mb-[13px] md:relative md:top-[54px] md:-z-10">
+      <section className="my-[120px] md:my-[64px] text-center text-[#333D4B] xl:mx-[86px] ">
+        <h2 className="text-transparent bg-clip-text bg-gradient-to-b from-[#83888F] from-0% to-customeggwhite to-100% font-fraunces text-[55px] md:text-[110px] font-[900]  mb-[13px] md:-z-10 xl:text-[180px] md:brightness-110">
           our collection
         </h2>
-        <div className="flex flex-col gap-12 md:px-[58px] md:text-left md:gap-8">
-          <div className="md:flex">
+        <div className="flex flex-col gap-12 md:px-[58px] xl:px-0 md:text-left xl:text-center md:gap-8 md:relative md:bottom-[100px] xl:bottom-[140px] xl:flex-row">
+          <div className="md:flex xl:flex-col xl:gap-[72px]">
             <img
               src={granExpresso}
-              className="w-[53%] my-0 mx-auto mb-6"
+              className="w-[53%] xl:w-full my-0 mx-auto mb-6 xl:mb-0 "
               alt="A pack of gran expresso"
             />
             <div className="md:mt-[30px]">
@@ -46,10 +46,10 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="md:flex">
+          <div className="md:flex xl:flex-col xl:gap-[72px]">
             <img
               src={planalto}
-              className="w-[53%] my-0 mx-auto mb-6"
+              className="w-[53%] my-0 mx-auto mb-6 xl:mb-0  xl:w-full"
               alt="A pack of Planalto"
             />
             <div className="md:mt-[30px]">
@@ -62,10 +62,10 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="md:flex">
+          <div className="md:flex xl:flex-col xl:gap-[72px]">
             <img
               src={piccollo}
-              className="w-[53%] my-0 mx-auto mb-6"
+              className="w-[53%] my-0 mx-auto mb-6 xl:mb-0  xl:w-full"
               alt="A pack of Piccollo"
             />
             <div className="md:mt-[30px]">
@@ -78,10 +78,10 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="md:flex">
+          <div className="md:flex xl:flex-col xl:gap-[72px]">
             <img
               src={danche}
-              className="w-[53%] my-0 mx-auto mb-6"
+              className="w-[53%] my-0 mx-auto mb-6 xl:mb-0  xl:w-full"
               alt="A pack of Danche"
             />
             <div className="md:mt-[30px]">
@@ -96,24 +96,24 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="bg-customdarkgrey rounded-[10px] px-6 pt-16 text-center h-[902px] md:h-[573px] text-customeggwhite md:px-[58px] md:pt-14">
-        <div className="mb-16 md:mb-[70px] md:mx-4">
+      <section className="bg-customdarkgrey rounded-[10px] px-6 pt-16 text-center h-[902px] md:h-[573px] xl:h-[577px] text-customeggwhite md:px-[58px] md:pt-14 lg:pt-[100px] w-full xl:flex xl:flex-col xl:items-center">
+        <div className="mb-16 md:mb-[70px] md:mx-4 lg:mb-[86px] xl:w-[540px]">
           <h2
-            className="text-[28px] md:text-[32px] md:leading-[48px]
-         font-black font-fraunces leading-7 mb-6">
+            className="text-[28px] md:text-[32px] lg:text-[40px] md:leading-[48px]
+         font-black font-fraunces leading-7 mb-6 lg:mb-8">
             Why choose us?
           </h2>
-          <p className="text-[15px] font-barlow leading-[25px] font-normal">
+          <p className="text-[15px] lg:text-base font-barlow leading-[25px] font-normal">
             A large part of our role is choosing which particular coffees will
             be featured in our range. This means working closely with the best
             coffee growers to give you a more impactful experience on every
             level.
           </p>
         </div>
-        <div className="flex flex-col gap-6 md:text-left">
-          <div className="bg-bluelagoon rounded-lg pt-[72px] pb-[51px] flex flex-col justify-center items-center md:flex-row md:pl-[70px] md:pr-[48px] md:py-[41px]">
+        <div className="flex flex-col gap-6 md:text-left w-full lg:flex-row lg:text-center">
+          <div className="bg-bluelagoon rounded-lg pt-[72px] pb-[51px] flex flex-col justify-center items-center md:flex-row lg:flex-col md:pl-[70px] md:pr-[48px] md:py-[41px] md:h-[180px] lg:pl-[48px] lg:pt-[72px] lg:pb-[48px] lg:h-auto">
             <svg
-              className="mb-14 md:mb-0 md:w-[56px] md:h-[56px]"
+              className="mb-14 md:mb-0 md:w-[56px] md:h-[56px] lg:w-[72px] lg:h-[72px] lg:mb-14"
               width="73"
               height="72"
               viewBox="0 0 73 72"
@@ -127,19 +127,19 @@ const Home = () => {
               />
             </svg>
 
-            <div className="md:pl-[55px]">
-              <h3 className="mb-6 text-2xl font-black font-fraunces md:mb-4">
+            <div className="md:pl-[55px] lg:p-0">
+              <h3 className="mb-6 text-2xl font-black font-fraunces md:mb-4 lg:mb-6">
                 Best quality
               </h3>
-              <p className="text-[15px] font-barlow leading-[25px] mx-8 md:mx-0">
+              <p className="text-[15px] lg:text-base lg:leading-[26px] font-barlow leading-[25px] mx-8 md:mx-0">
                 Discover an endless variety of the world’s best artisan coffee
                 from each of our roasters.
               </p>
             </div>
           </div>
-          <div className="bg-bluelagoon rounded-lg pt-[72px] pb-[51px] flex flex-col justify-center items-center md:flex-row md:pl-[70px] md:pr-[48px] md:py-[41px]">
+          <div className="bg-bluelagoon rounded-lg pt-[72px] pb-[51px] flex flex-col justify-center items-center md:flex-row lg:flex-col md:pl-[70px] md:pr-[48px] md:py-[41px] md:h-[180px] lg:pl-[48px] lg:pt-[72px] lg:pb-[48px] lg:h-auto">
             <svg
-              className="mb-14 md:mb-0 md:w-[56px] md:h-[56px]"
+              className="mb-14 md:mb-0 md:w-[56px] md:h-[56px] lg:w-[72px] lg:h-[72px] lg:mb-14"
               width="72"
               height="72"
               viewBox="0 0 72 72"
@@ -152,19 +152,19 @@ const Home = () => {
                 fill="#FDD6BA"
               />
             </svg>
-            <div className="md:pl-[55px]">
-              <h3 className="mb-6 text-2xl font-black font-fraunces md:mb-4">
+            <div className="md:pl-[55px] lg:p-0">
+              <h3 className="mb-6 text-2xl font-black font-fraunces md:mb-4 lg:mb-6">
                 Exclusive benefits
               </h3>
-              <p className="text-[15px] font-barlow leading-[25px] mx-8 md:mx-0">
+              <p className="text-[15px] font-barlow leading-[25px] mx-8 md:mx-0 lg:text-base lg:leading-[26px]">
                 Special offers and swag when you subscribe, including 30% off
                 your first shipment.
               </p>
             </div>
           </div>
-          <div className="bg-bluelagoon rounded-lg pt-[83px] pb-[48px] flex flex-col justify-center items-center md:flex-row md:pl-[70px] md:pr-[48px] md:py-[41px]">
+          <div className="bg-bluelagoon rounded-lg pt-[83px] pb-[48px] flex flex-col justify-center items-center md:flex-row lg:flex-col md:pl-[70px] md:pr-[48px] md:py-[41px] lg:pt-[72px] lg:pl-[48px] lg:pb-[48px] md:h-[180px] lg:h-auto">
             <svg
-              className="mb-[67px] md:mb-0 md:w-[55px] md:h-[39px]"
+              className="mb-[67px] md:mb-0 md:w-[55px] md:h-[39px] lg:w-[72px] lg:h-[72px] lg:mb-14"
               width="72"
               height="50"
               viewBox="0 0 72 50"
@@ -178,11 +178,11 @@ const Home = () => {
                 fill="#FDD6BA"
               />
             </svg>
-            <div className="md:pl-[55px]">
-              <h3 className="mb-6 text-2xl font-black font-fraunces md:mb-4">
+            <div className="md:pl-[55px] lg:p-0">
+              <h3 className="mb-6 text-2xl font-black font-fraunces md:mb-4 lg:mb-6">
                 Free shipping
               </h3>
-              <p className="text-[15px] font-barlow leading-[25px] mx-8 md:mx-0">
+              <p className="text-[15px] font-barlow leading-[25px] mx-8 md:mx-0 lg:text-base lg:leading-[26px]">
                 We cover the cost and coffee is delivered fast. Peak freshness:
                 guaranteed.
               </p>
@@ -190,49 +190,51 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="mt-[689px] mb-[120px] md:mt-[438px] md:mb-[144px] text-center md:text-left">
+      <section className="mt-[717px] mb-[120px] md:mt-[434px] md:mb-[144px] lg:mt-[351px] lg:mb-[200px] text-center md:text-left">
         <h2 className="text-[#83888f] text-2xl font-black  font-fraunces">
           How it works
         </h2>
-        <div className="hidden md:block border-customapricot border-t-2 md:mt-[55px] w-[70%]"></div>
-        <div className="my-20 md:mt-0 md:mb-11 flex flex-col gap-1 md:gap-[10px] md:flex-row">
-          <div className="flex flex-col gap-6 text-customgrayishblue">
+        <div className="hidden md:block border-customapricot border-t-2 md:mt-[55px] lg:mt-[80px] w-[70%] lg:w-[74%]"></div>
+        <div className="my-20 md:mt-0 md:mb-11 lg:mb-16 flex flex-col gap-1 md:gap-[10px] md:flex-row lg:gap-24">
+          <div className="flex flex-col gap-6 lg:gap-0  text-customgrayishblue">
             <div className=" hidden md:block border-2 rounded-full w-[31px] h-[31px] bg-customeggwhite border-bluelagoon relative bottom-4"></div>
-            <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px]">
+            <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px] lg:mt-[67px] lg:mb-[38px]">
               01
             </span>
-            <h3 className="text-[28px] font-black font-fraunces leading-loose md:pr-[20px] md:leading-9">
+            <h3 className="text-[28px] font-black font-fraunces leading-loose md:pr-[20px] md:leading-9 lg:text-[32px] lg:mb-[42px] lg:pr-[150px]">
               Pick your coffee
             </h3>
-            <p className="text-[15px] font-barlow leading-[25px] ">
+            <p
+              className="text-[15px] font-barlow leading-[25px] lg:text-base lg:leading-[26px]
+            ">
               Select from our evolving range of artisan coffees. Our beans are
               ethically sourced and we pay fair prices for them. There are new
               coffees in all profiles every month for you to try out.
             </p>
           </div>
-          <div className="flex flex-col gap-6 text-customgrayishblue">
+          <div className="flex flex-col gap-6 lg:gap-0 text-customgrayishblue">
             <div className=" hidden md:block border-2 rounded-full w-[31px] h-[31px] bg-customeggwhite border-bluelagoon relative bottom-4"></div>
-            <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px]">
+            <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px] lg:mt-[67px] lg:mb-[38px]">
               02
             </span>
-            <h3 className="text-[28px] font-black font-fraunces leading-loose md:pr-[20px] md:leading-9">
+            <h3 className="text-[28px] font-black font-fraunces leading-loose md:pr-[20px] md:leading-9 lg:text-[32px] lg:mb-[42px] lg:pr-[60px]">
               Choose the frequency
             </h3>
-            <p className="text-[15px] font-barlow leading-[25px]">
+            <p className="text-[15px] font-barlow leading-[25px] lg:text-base lg:leading-[26px] ">
               Customize your order frequency, quantity, even your roast style
               and grind type. Pause, skip or cancel your subscription with no
               commitment through our online portal.
             </p>
           </div>
-          <div className="flex flex-col gap-6 text-customgrayishblue">
+          <div className="flex flex-col gap-6 lg:gap-0 text-customgrayishblue">
             <div className=" hidden md:block border-2 rounded-full w-[31px] h-[31px] bg-customeggwhite border-bluelagoon relative bottom-4"></div>
-            <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px]">
+            <span className="text-customapricot text-7xl font-black font-fraunces leading-[72px] lg:mt-[67px] lg:mb-[38px]">
               03
             </span>
-            <h3 className="text-[28px] font-black font-fraunces leading-loose md:pr-[20px] md:leading-9">
+            <h3 className="text-[28px] font-black font-fraunces leading-loose md:pr-[20px] md:leading-9 lg:text-[32px] lg:mb-[42px] lg:pr-[60px]">
               Receive and enjoy!
             </h3>
-            <p className="text-[15px] font-barlow leading-[25px] ">
+            <p className="text-[15px] font-barlow leading-[25px] lg:text-base lg:leading-[26px]">
               We ship your package within 48 hours, freshly roasted. Sit back
               and enjoy award-winning world-class coffees curated to provide a
               distinct tasting experience.
