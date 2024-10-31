@@ -18,13 +18,13 @@ const About = () => {
           </p>
         </div>
       </div>
-      <section className="mt-[120px] mb-[198px]">
+      <section className="mt-[120px] mb-[198px] md:mb-[313px] md:flex gap-[69px]">
         <img
           src={secondImg}
           alt="Cute Barrista making coffee"
-          className="rounded-lg"
+          className="rounded-lg w-[40.8%] "
         />
-        <div className="mt-12 text-customgrayishblue text-center flex flex-col gap-8">
+        <div className="mt-12 md:mt-2 text-customgrayishblue text-center flex flex-col gap-8 md:text-left">
           <h2 className="font-black font-fraunces text-[32px] leading-[48px]">
             Our commitment
           </h2>
@@ -43,11 +43,11 @@ const About = () => {
           </p>
         </div>
       </section>
-      <section className="bg-customdarkgrey flex flex-col items-center px-6 rounded-[10px]">
-        <div className="w-full h-[14vh] bg-[url('/src/assets/png/about-third-img.png')] md:bg-[url('/src/assets/png/about-third-img-tablet.png')] md:bg-center lg:bg-[url('/src/assets/png/about-third-img-desktop.png')] bg-cover bg-bottom relative bottom-[78px] -mb-16 rounded-lg"></div>
+      <section className="bg-customdarkgrey flex flex-col items-center px-6 md:px-12 rounded-[10px]">
+        <div className="w-full h-[14vh] md:h-[28.3vh] bg-[url('/src/assets/png/about-third-img.png')] md:bg-[url('/src/assets/png/about-third-img-tablet.png')] md:bg-center lg:bg-[url('/src/assets/png/about-third-img-desktop.png')] bg-cover bg-bottom relative bottom-[78px] md:bottom-[160px] -mb-16 md:-mb-40 rounded-lg"></div>
 
-        <div className="text-customeggwhite text-center mt-16 mb-[61px] flex flex-col gap-6">
-          <h3 className="text-[28px] font-fraunces font-black leading-7">
+        <div className="text-customeggwhite text-center mt-16 mb-[61px] md:mb-[67px] md:mx-[26px] flex flex-col gap-6">
+          <h3 className="text-[28px] md:text-[32px] font-fraunces font-black leading-7 md:leading-[48px]">
             {" "}
             Uncompromising quality
           </h3>
@@ -61,12 +61,12 @@ const About = () => {
           </p>
         </div>
       </section>
-      <section className="my-[120px] text-center">
+      <section className="my-[120px] md:my-[144px]  text-center md:text-left">
         <h3 className="text-[#83888f] text-2xl font-black font-fraunces leading-loose mb-[72px]">
           Our headquarters
         </h3>
-        <div className="flex flex-col gap-[60px]">
-          <div className="flex flex-col items-center">
+        <div className="flex flex-col gap-[60px] md:gap-4 md:flex-row">
+          <div className="flex flex-col items-center md:justify-start md:items-start text-nowrap md:flex-1">
             <svg
               className="mb-12"
               width="42"
@@ -91,7 +91,7 @@ const About = () => {
               <span>+44 1241 918425</span>
             </p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center md:justify-start md:items-start md:flex-1">
             <svg
               className="mb-12"
               width="52"
@@ -107,7 +107,7 @@ const About = () => {
               />
             </svg>
 
-            <span className="font-fraunces text-customgrayishblue font-black text-[28px] leading-9 mb-[22px]">
+            <span className="font-fraunces text-customgrayishblue font-black text-[28px] leading-9 mb-[22px] ">
               Canada
             </span>
             <p className="font-barlow text-base leading-relaxed text-customgrayishblue flex flex-col">
@@ -117,11 +117,11 @@ const About = () => {
               <span>+1 416 485 2997</span>
             </p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center md:justify-start md:items-start md:flex-1">
             <svg
               className="mb-12"
-              width="49"
-              height="44"
+              width="52"
+              height="50"
               viewBox="0 0 49 44"
               fill="none"
               xmlns="http://www.w3.org/2000/svg">
