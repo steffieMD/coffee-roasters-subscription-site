@@ -26,10 +26,10 @@ const Home = () => {
         </div>
       </div>
       <section className="my-[120px] md:my-[64px] text-center text-[#333D4B] xl:mx-[86px] ">
-        <h2 className="text-transparent bg-clip-text bg-gradient-to-b from-[#83888F] from-0% to-customeggwhite to-100% font-fraunces text-[55px] md:text-[110px] font-[900]  mb-[13px] md:-z-10 xl:text-[180px] md:brightness-110">
+        <h2 className="text-transparent bg-clip-text bg-gradient-to-b from-[#83888F] from-0% to-customeggwhite to-100% font-fraunces text-[40px] md:text-[110px] font-[900]  mb-[13px] md:-z-10 xl:text-[150px] md:brightness-110">
           our collection
         </h2>
-        <div className="flex flex-col gap-12 md:px-[58px] xl:px-0 md:text-left xl:text-center md:gap-8 md:relative md:bottom-[100px] xl:bottom-[140px] xl:flex-row">
+        <div className="flex flex-col gap-12 md:px-[58px] xl:px-0 md:text-left xl:text-center md:gap-8 md:relative md:bottom-[100px] xl:bottom-[120px] xl:flex-row">
           <div className="md:flex xl:flex-col xl:gap-[72px]">
             <img
               src={granExpresso}
