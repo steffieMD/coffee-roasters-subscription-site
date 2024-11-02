@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center max-w-[1280px]">
       <div className="bg-[url('/src/assets/png/hero-img-home.png')] md:bg-[url('/src/assets/png/hero-img-home-tablet.png')] xl:bg-[url('/src/assets/png/hero-image-home-large.png')] text-customeggwhite py-[100px] px-6 text-center rounded-[10px] bg-cover bg-no-repeat isolate brightness-50 md:filter-none md:px-[58px] xl:w-full">
         <div className="md:w-[65%] md:text-left xl:w-[50%] ">
           <h1 className="pb-6 font-fraunces text-[40px] md:text-5xl font-[900] leading-[48px] xl:text-7xl xl:mb-8">
@@ -191,9 +191,6 @@ const Home = () => {
         </div>
       </section>
       <section className="mt-[717px] mb-[120px] md:mt-[434px] md:mb-[144px] lg:mt-[351px] lg:mb-[200px] text-center md:text-left">
-        <h2 className="text-[#83888f] text-2xl font-black  font-fraunces">
-          How it works
-        </h2>
         <div className="hidden md:block border-customapricot border-t-2 md:mt-[55px] lg:mt-[80px] w-[70%] lg:w-[74%]"></div>
         <div className="my-20 md:mt-0 md:mb-11 lg:mb-16 flex flex-col gap-1 md:gap-[10px] md:flex-row lg:gap-24">
           <div className="flex flex-col gap-6 lg:gap-0  text-customgrayishblue">

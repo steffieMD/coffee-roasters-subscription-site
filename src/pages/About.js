@@ -4,10 +4,12 @@ import thirdImg from "../assets/png/about-third-img.png";
 
 const About = () => {
   return (
-    <div className="">
-      <div className="bg-[url('/src/assets/png/hero-img-about-mobile.png')] bg-right md:bg-[url('/src/assets/png/hero-img-about-tablet.png')] xl:bg-[url('/src/assets/png/hero-img-about-desktop.png')] text-customeggwhite pt-[111px] pb-[87px] px-6 text-center rounded-[10px] bg-cover bg-no-repeat isolate brightness-50 md:filter-none md:px-[58px] xl:w-full">
-        <div className="md:w-[65%] md:text-left xl:w-[50%] ">
-          <h1 className="pb-6 font-fraunces text-[28px] md:text-5xl font-[900] leading-7 xl:text-7xl xl:mb-8">
+    <div className="max-w-[1280px]">
+      <div
+        className="bg-[url('/src/assets/png/hero-img-about-mobile.png')] bg-right md:bg-[url('/src/assets/png/hero-img-about-tablet.png')] xl:bg-[url('/src/assets/png/hero-img-about-desktop.png')] 
+      text-customeggwhite pt-[111px] pb-[87px] px-6 text-center rounded-[10px] bg-cover bg-no-repeat isolate brightness-50 md:filter-none md:px-[58px]">
+        <div className="md:w-[65%] md:text-left xl:w-[34.8%] ">
+          <h1 className="pb-6 font-fraunces text-[28px] md:text-[32px] font-black leading-7 md:leading-10 lg:text-[40px] lg:leading-[48px] lg:mb-6">
             About Us
           </h1>
           <p className="font-barlow text-[15px] leading-[25px] xl:text-base xl:leading-relaxed break-words">
@@ -18,13 +20,13 @@ const About = () => {
           </p>
         </div>
       </div>
-      <section className="mt-[120px] mb-[198px] md:mb-[313px] md:flex gap-[69px]">
+      <section className="mt-[120px] mb-[198px] md:mb-[313px] md:flex gap-[69px] xl:gap-[125px] xl:px-[85px]">
         <img
           src={secondImg}
           alt="Cute Barrista making coffee"
-          className="rounded-lg w-[40.8%] "
+          className="rounded-lg w-full md:w-[40.8%] "
         />
-        <div className="mt-12 md:mt-2 text-customgrayishblue text-center flex flex-col gap-8 md:text-left">
+        <div className="mt-12 md:mt-2 text-customgrayishblue text-center flex flex-col gap-8 md:text-left lg:pt-14 xl:pt-[90px]">
           <h2 className="font-black font-fraunces text-[32px] leading-[48px]">
             Our commitment
           </h2>
@@ -43,10 +45,10 @@ const About = () => {
           </p>
         </div>
       </section>
-      <section className="bg-customdarkgrey flex flex-col items-center px-6 md:px-12 rounded-[10px]">
-        <div className="w-full h-[14vh] md:h-[28.3vh] bg-[url('/src/assets/png/about-third-img.png')] md:bg-[url('/src/assets/png/about-third-img-tablet.png')] md:bg-center lg:bg-[url('/src/assets/png/about-third-img-desktop.png')] bg-cover bg-bottom relative bottom-[78px] md:bottom-[160px] -mb-16 md:-mb-40 rounded-lg"></div>
+      <section className="bg-customdarkgrey flex flex-col items-center px-6 md:px-12 lg:px-[85px] rounded-[10px] xl:flex-row xl:gap-[125px]">
+        <div className="w-full h-[14vh] md:h-[28.3vh] lg:h-[474px] bg-[url('/src/assets/png/about-third-img.png')] md:bg-[url('/src/assets/png/about-third-img-tablet.png')] md:bg-bottom lg:bg-[url('/src/assets/png/about-third-img-desktop.png')] bg-cover bg-bottom relative bottom-[78px] md:bottom-[160px] xl:bottom-20 -mb-16 md:-mb-40 rounded-lg xl:order-2 xl:w-1/2 xl:mb-0"></div>
 
-        <div className="text-customeggwhite text-center mt-16 mb-[61px] md:mb-[67px] md:mx-[26px] flex flex-col gap-6">
+        <div className="text-customeggwhite text-center mt-16 mb-[61px] md:mb-[67px] md:mx-[26px] flex flex-col gap-6 xl:order-1 xl:text-left xl:w-1/2">
           <h3 className="text-[28px] md:text-[32px] font-fraunces font-black leading-7 md:leading-[48px]">
             {" "}
             Uncompromising quality
@@ -61,11 +63,11 @@ const About = () => {
           </p>
         </div>
       </section>
-      <section className="my-[120px] md:my-[144px]  text-center md:text-left">
+      <section className="my-[120px] md:my-[144px]  text-center md:text-left lg:pl-[85px] lg:pr-[150px]">
         <h3 className="text-[#83888f] text-2xl font-black font-fraunces leading-loose mb-[72px]">
           Our headquarters
         </h3>
-        <div className="flex flex-col gap-[60px] md:gap-4 md:flex-row">
+        <div className="flex flex-col gap-[60px] md:gap-4 lg:gap-[95px] md:flex-row ">
           <div className="flex flex-col items-center md:justify-start md:items-start text-nowrap md:flex-1">
             <svg
               className="mb-12"

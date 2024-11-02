@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <div className="App ">
-        <div className="px-6 md:px-10 lg:px-20">
+        <div className="px-6 md:px-10 lg:px-20 flex flex-col items-center ">
           <Navbar />
 
           <Routes>

@@ -3,26 +3,90 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   const [style, setStyle] = useState("hidden md:block");
-  const [activeStyle, setActiveStyle] = useState(
-    "text-[#333D4B] md:text-[#83888F] hover:text-[#83888F] md:hover:text-customgrayishblue"
+  const [svg, setSvg] = useState(
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="16"
+      height="15"
+      viewBox="0 0 16 15"
+      fill="none">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0 1.5C0 0.671573 0.671573 0 1.5 0H14.5C15.3284 0 16 0.671573 16 1.5C16 2.32843 15.3284 3 14.5 3H1.5C0.671573 3 0 2.32843 0 1.5ZM0 7.5C0 6.67157 0.671573 6 1.5 6H14.5C15.3284 6 16 6.67157 16 7.5C16 8.32843 15.3284 9 14.5 9H1.5C0.671573 9 0 8.32843 0 7.5ZM1.5 12C0.671573 12 0 12.6716 0 13.5C0 14.3284 0.671573 15 1.5 15H14.5C15.3284 15 16 14.3284 16 13.5C16 12.6716 15.3284 12 14.5 12H1.5Z"
+        fill="#333D4B"
+      />
+    </svg>
   );
 
   const toggleNav = () => {
-    if (style !== "hidden md:block") setStyle("hidden md:block");
-    else setStyle("block md:hidden");
+    if (style !== "hidden md:block") {
+      setStyle("hidden md:block");
+      setSvg(
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="15"
+          viewBox="0 0 16 15"
+          fill="none">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 1.5C0 0.671573 0.671573 0 1.5 0H14.5C15.3284 0 16 0.671573 16 1.5C16 2.32843 15.3284 3 14.5 3H1.5C0.671573 3 0 2.32843 0 1.5ZM0 7.5C0 6.67157 0.671573 6 1.5 6H14.5C15.3284 6 16 6.67157 16 7.5C16 8.32843 15.3284 9 14.5 9H1.5C0.671573 9 0 8.32843 0 7.5ZM1.5 12C0.671573 12 0 12.6716 0 13.5C0 14.3284 0.671573 15 1.5 15H14.5C15.3284 15 16 14.3284 16 13.5C16 12.6716 15.3284 12 14.5 12H1.5Z"
+            fill="#333D4B"
+          />
+        </svg>
+      );
+    } else {
+      setStyle("block md:hidden");
+      setSvg(
+        <svg
+          width="14"
+          height="13"
+          viewBox="0 0 14 13"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <g id="Combined Shape 2">
+            <path
+              id="Combined Shape"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3.46447 0.84266C2.87868 0.256874 1.92893 0.256874 1.34315 0.84266C0.757362 1.42845 0.757362 2.37819 1.34315 2.96398L4.87868 6.49951L1.34315 10.035C0.757362 10.6208 0.757362 11.5706 1.34315 12.1564C1.92893 12.7422 2.87868 12.7422 3.46447 12.1564L7 8.62083L10.5355 12.1564C11.1213 12.7422 12.0711 12.7422 12.6569 12.1564C13.2426 11.5706 13.2426 10.6208 12.6569 10.035L9.12132 6.49951L12.6569 2.96398C13.2426 2.37819 13.2426 1.42845 12.6569 0.842661C12.0711 0.256874 11.1213 0.256874 10.5355 0.842661L7 4.37819L3.46447 0.84266Z"
+              fill="#333D4B"
+            />
+          </g>
+        </svg>
+      );
+    }
   };
 
   const closeNav = (event) => {
     event.preventDefault();
-    if (style === "block md:hidden") setStyle("hidden md:block");
+    if (style === "block md:hidden") {
+      setStyle("hidden md:block");
+      setSvg(
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="15"
+          viewBox="0 0 16 15"
+          fill="none">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M0 1.5C0 0.671573 0.671573 0 1.5 0H14.5C15.3284 0 16 0.671573 16 1.5C16 2.32843 15.3284 3 14.5 3H1.5C0.671573 3 0 2.32843 0 1.5ZM0 7.5C0 6.67157 0.671573 6 1.5 6H14.5C15.3284 6 16 6.67157 16 7.5C16 8.32843 15.3284 9 14.5 9H1.5C0.671573 9 0 8.32843 0 7.5ZM1.5 12C0.671573 12 0 12.6716 0 13.5C0 14.3284 0.671573 15 1.5 15H14.5C15.3284 15 16 14.3284 16 13.5C16 12.6716 15.3284 12 14.5 12H1.5Z"
+            fill="#333D4B"
+          />
+        </svg>
+      );
+    }
   };
 
   return (
-    <header className=" h-[90px] flex flex-col md:flex-row py-8 font-fraunces md:font-barlow md:justify-between relative z-50">
+    <header className=" h-[90px] flex flex-col md:flex-row py-8 font-fraunces md:font-barlow md:justify-between relative z-50 w-full max-w-[1280px]">
       <div className="flex justify-between">
-        <Link to="/">
+        <Link to="/" className="my-auto mx-0 cursor-pointer">
           <svg
-            className="my-auto mx-0 cursor-pointer"
             xmlns="http://www.w3.org/2000/svg"
             width="236"
             height="26"
@@ -40,24 +104,13 @@ function Navbar() {
               d="M14.3891 4.44702C10.8747 0.935462 5.66533 0.429955 2.77639 3.322C-0.114045 6.21254 0.391444 11.4221 3.89987 14.9352C4.83584 15.8712 5.91432 16.5867 7.05279 17.0997C7.42629 14.9292 8.49726 12.8426 10.1232 11.1296C9.58474 10.9376 9.03275 10.7756 8.45676 10.6181C5.04584 9.6821 3.35088 6.83655 2.95489 3.5005C3.28241 3.89436 3.5806 4.30747 3.87792 4.71937C4.45478 5.51854 5.02833 6.31312 5.80632 6.95355C7.01657 7.95009 8.345 8.33478 9.79833 8.75564C9.85444 8.77188 9.91074 8.78819 9.96723 8.80458C10.6557 9.00409 11.2542 9.29959 11.8032 9.6446C13.2462 8.59008 14.8736 7.88807 16.5536 7.59856C16.0421 6.46005 15.3251 5.38303 14.3891 4.44702ZM8.44626 17.9337C8.66976 15.7602 9.72274 13.6347 11.4102 11.9471C14.9246 8.43558 20.134 7.92857 23.0229 10.8221C25.9134 13.7127 25.4094 18.9222 21.8965 22.4353C20.209 24.1228 18.0835 25.1758 15.9101 25.4008C15.6206 25.4293 15.3341 25.4443 15.0536 25.4443C13.1847 25.4443 11.5152 24.7888 10.2852 23.5588C8.86925 22.1443 8.21527 20.1463 8.44626 17.9337ZM13.5866 19.7172C14.7386 18.8382 15.9851 18.4902 17.3411 18.1197C20.752 17.1837 22.4454 14.3382 22.8429 11.0021C22.5182 11.3938 22.2222 11.8041 21.927 12.2132C21.3484 13.0152 20.7732 13.8125 19.9915 14.4552C18.7775 15.4533 17.446 15.8387 15.9862 16.2611L15.8306 16.3062C12.4932 17.2752 10.8432 20.0968 10.4622 23.3803C10.791 22.9853 11.0922 22.5752 11.3918 22.1673C12.0421 21.2817 12.685 20.4063 13.5866 19.7172Z"
               fill="#0E8784"
             />
-          </svg>
+          </svg>{" "}
         </Link>
-
-        <svg
+        <div
           onClick={toggleNav}
-          className="my-auto mx-0 md:hidden cursor-pointer"
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="15"
-          viewBox="0 0 16 15"
-          fill="none">
-          <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
-            d="M0 1.5C0 0.671573 0.671573 0 1.5 0H14.5C15.3284 0 16 0.671573 16 1.5C16 2.32843 15.3284 3 14.5 3H1.5C0.671573 3 0 2.32843 0 1.5ZM0 7.5C0 6.67157 0.671573 6 1.5 6H14.5C15.3284 6 16 6.67157 16 7.5C16 8.32843 15.3284 9 14.5 9H1.5C0.671573 9 0 8.32843 0 7.5ZM1.5 12C0.671573 12 0 12.6716 0 13.5C0 14.3284 0.671573 15 1.5 15H14.5C15.3284 15 16 14.3284 16 13.5C16 12.6716 15.3284 12 14.5 12H1.5Z"
-            fill="#333D4B"
-          />
-        </svg>
+          className="my-auto mx-0 md:hidden cursor-pointer">
+          {svg}
+        </div>
       </div>
       <nav className={style} onClick={closeNav}>
         <ul
