@@ -1,6 +1,5 @@
 import React from "react";
 import secondImg from "../assets/png/about-second-img.png";
-import thirdImg from "../assets/png/about-third-img.png";
 
 const About = () => {
   return (

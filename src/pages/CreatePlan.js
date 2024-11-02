@@ -7,7 +7,6 @@ const CreatePlan = () => {
   const [weightMenu, setWeightMenu] = useState("hidden");
   const [textureMenu, setTextureMenu] = useState("hidden");
   const [deliveryMenu, setDeliveryMenu] = useState("hidden");
-  const [preferences, setPreferences] = useState("");
   const [svgContent, setSvgContent] = useState(
     <svg
       width="19"
