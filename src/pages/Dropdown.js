@@ -50,7 +50,7 @@ const Dropdown = ({ options, questions, onChange }) => {
     <div className="relative inline-block">
       <div onClick={toggleDropdown}>
         <div className="flex justify-between mb-14">
-          <button className="text-[#83888f] text-2xl font-black font-fraunces leading-7 md:text-[32px] md:leading-[48px] lg:text-[40px]">
+          <button className="text-[#83888f] text-2xl font-black font-fraunces leading-7 md:text-[32px] md:leading-[48px] lg:text-[40px] text-left">
             {questions}
           </button>
           <div className="cursor-pointer">{handleArrowChange(isOpen)}</div>
