@@ -50,7 +50,7 @@ const Dropdown = ({ options, questions }) => {
   return (
     <div className="relative inline-block">
       <div onClick={toggleDropdown}>
-        <div className="flex justify-between">
+        <div className="flex justify-between mb-14">
           <button className="text-[#83888f] text-2xl font-black font-fraunces leading-7 md:text-[32px] md:leading-[48px] lg:text-[40px]">
             {questions}
           </button>
@@ -63,7 +63,7 @@ const Dropdown = ({ options, questions }) => {
             <li
               key={option.value}
               onClick={() => handleOptionClick(option)}
-              className="flex flex-col bg-[#F4F1EB] rounded-lg py-6 px-[25px] md:pt-[32px] md:pb-[84px] gap-2 text-customgrayishblue md:flex-1 hover:bg-bluelagoon hover:text-white">
+              className="flex flex-col bg-[#F4F1EB] rounded-lg py-6 px-[25px] md:pt-[32px] md:pb-[84px] gap-2 text-customgrayishblue md:flex-1 hover:bg-[#FDD6BA] hover:text-white ">
               <span className="text-2xl font-black font-fraunces leading-loos">
                 {option.label}
               </span>
