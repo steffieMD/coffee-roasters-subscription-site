@@ -108,25 +108,49 @@ const CreatePlan = () => {
   const [quantity, setQuantity] = useState("250g");
   const [grindOption, setGrindOption] = useState("Wholebean");
   const [delivery, setDelivery] = useState("Every week");
+  const [modalStyle, setModalStyle] = useState("hidden");
+  const [activePreference, setActivePreference] = useState("font-normal");
+  const [activeBeanType, setActiveBeanType] = useState("font-normal");
+  const [activeQuantity, setActiveQuantity] = useState("font-normal");
+  const [activeGrindOption, setActiveGrindOption] = useState("font-normal");
+  const [activeDelivery, setActiveDelivery] = useState("font-normal");
 
-  //  const handlePreference = (selected) =>{
-  //   setPreferences(selected)
-  //  }
+  const displayModal = () => {
+    if (modalStyle !== "block") setModalStyle("block");
+  };
 
-  //   const handleBeanTypes = (selected) => {
-  //     setBeanType(selected);
-  //   };
+  const closeModal = () => {
+    if (modalStyle !== "hidden") setModalStyle("hidden");
+  };
 
-  //    const handleQuantity = (selected) => {
-  //      setQuantity(selected);
-  //    };
+  const handlePreferences = (option) => {
+    setPreferences(option);
+    setActivePreference("text-black");
+  };
 
-  //     const handlePreference = (selected) =>{
-  //   setPreferences(selected)
-  //  }
+  const handleBeanTypes = (option) => {
+    setBeanType(option);
+    setActiveBeanType("text-black");
+  };
+
+  const handleQuantity = (option) => {
+    setQuantity(option);
+    setActiveQuantity("text-black");
+  };
+
+  const handleGrindOption = (option) => {
+    setGrindOption(option);
+    setActiveGrindOption("text-black");
+  };
+
+  const handleDelivery = (option) => {
+    setDelivery(option);
+    setActiveDelivery("text-black");
+  };
+
   return (
     <div>
-      <div className="max-w-[1280px]">
+      <div className="max-w-[1280px]" onClick={closeModal}>
         <div className="bg-[url('/src/assets/png/createplan-hero-img.png')] md:bg-[url('/src/assets/png/createplan-hero-img-tablet.png')] xl:bg-[url('/src/assets/png/createplan-hero-img-desktop.png')] xl:bg-center text-customeggwhite pt-[101px] pb-[136px] px-6 text-center rounded-[10px] bg-cover bg-no-repeat isolate brightness-50 md:filter-none md:px-[58px] xl:w-full">
           <div className="md:w-[65%] md:text-left xl:w-[50%] ">
             <h1 className="pb-[22px] font-fraunces text-[40px] md:text-5xl font-[900] leading-10 xl:text-7xl xl:mb-8">
@@ -195,6 +219,7 @@ const CreatePlan = () => {
                 <span>01</span>
                 <span>Preferences</span>
               </div>
+
               <div className="flex gap-6 border-b-2 border-customdarkgrey border-opacity-55 ">
                 <span>02</span>
                 <span>Bean Type</span>
@@ -214,17 +239,97 @@ const CreatePlan = () => {
             </div>
           </div>
           <div className="w-full flex flex-col gap-[88px]">
-            <Dropdown options={options1} questions={questions[0]} />
-            <Dropdown options={options2} questions={questions[1]} />
-            <Dropdown options={options3} questions={questions[2]} />
-            <Dropdown options={options4} questions={questions[3]} />
-            <Dropdown options={options5} questions={questions[4]} />
+            <Dropdown
+              options={options1}
+              questions={questions[0]}
+              onChange={handlePreferences}
+            />
+            <Dropdown
+              options={options2}
+              questions={questions[1]}
+              onChange={handleBeanTypes}
+            />
+            <Dropdown
+              options={options3}
+              questions={questions[2]}
+              onChange={handleQuantity}
+            />
+            <Dropdown
+              options={options4}
+              questions={questions[3]}
+              onChange={handleGrindOption}
+            />
+            <Dropdown
+              options={options5}
+              questions={questions[4]}
+              onChange={handleDelivery}
+            />
           </div>
         </section>
 
-        <button className="bg-[#0E8784] px-[31px] pt-[15px] pb-[16px] rounded-md font-fraunces text-lg font-[900] text-customeggwhite hover:bg-hovergreen">
-          Create your plan
-        </button>
+        <section className="bg-customdarkgrey rounded-[10px] px-[25px] py-[32px] text-white mb-14 md:mb-10">
+          <span className="text-base font-normal font-barlow uppercase leading-relaxed">
+            order summary
+          </span>
+          <p className="text-2xl font-black font-fraunces leading-10">
+            “I drink my coffee as{" "}
+            <span className="text-bluelagoon">{preferences}</span>, with a{" "}
+            <span className="text-bluelagoon">{beanType}</span> type of bean.{" "}
+            <span className="text-bluelagoon">{quantity}</span> ground ala{" "}
+            <span className="text-bluelagoon">{grindOption}</span>, sent to me{" "}
+            <span className="text-bluelagoon">{delivery}</span>
+            .”
+          </p>
+        </section>
+        <div className="flex md:justify-center lg:justify-end">
+          <button
+            className="bg-[#0E8784] px-[31px] pt-[15px] pb-[16px] rounded-md font-fraunces text-lg font-[900] text-customeggwhite hover:bg-hovergreen mb-[120px] md:mb-[144px] lg:mb-[168px]"
+            onClick={displayModal}>
+            Create your plan
+          </button>
+        </div>
+        <div className={modalStyle}>
+          <div className="fixed px-6 md:px-0 pt-[35px] md:pt-0 z-10 left-0 top-0 w-full h-full overflow-auto bg-opacity-50 bg-black flex justify-center items-center flex-col">
+            {" "}
+            <section className="bg-customeggwhite md:w-[70.3%] xl:w-[37.5%] text-[#83888f] mb-14 md:mb-10 rounded-lg">
+              <div className="bg-customdarkgrey rounded-lg text-white px-6 md:px-14 py-7">
+                <span className="text-[28px] font-black font-fraunces leading-loose capitalize">
+                  order summary
+                </span>
+              </div>
+              <div className="px-6 md:px-14 py-10 md:py-14">
+                <p className="text-2xl font-black font-fraunces leading-10 md:mb-[7px]">
+                  “I drink my coffee as{" "}
+                  <span className="text-bluelagoon">{preferences}</span>, with a{" "}
+                  <span className="text-bluelagoon">{beanType}</span> type of
+                  bean. <span className="text-bluelagoon">{quantity}</span>{" "}
+                  ground ala{" "}
+                  <span className="text-bluelagoon">{grindOption}</span>, sent
+                  to me <span className="text-bluelagoon">{delivery}</span>
+                  .”
+                </p>
+                <p className="text-customgrayishblue text-[15px]font-normal font-barlow leading-[25px] mb-6 md:mb-[47px]">
+                  Is this correct? You can proceed to checkout or go back to
+                  plan selection if something is off. Subscription discount
+                  codes can also be redeemed at the checkout.{" "}
+                </p>
+                <div className="flex md:justify-center lg:justify-end md:hidden">
+                  <button className="bg-[#0E8784] px-[31px] pt-[15px] pb-[16px] rounded-md font-fraunces text-lg font-[900] text-customeggwhite hover:bg-hovergreen ">
+                    Checkout - $14.00 / mo
+                  </button>
+                </div>
+                <div className="hidden md:grid grid-cols-2 gap-[13px]">
+                  <span className="text-customdarkgrey text-[32px] font-black font-fraunces leading-9 text-center my-auto">
+                    $14.00 / mo
+                  </span>
+                  <button className="bg-[#0E8784] px-[31px] pt-[15px] pb-[16px] rounded-md font-fraunces text-lg font-[900] text-customeggwhite hover:bg-hovergreen ">
+                    Checkout
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
   );

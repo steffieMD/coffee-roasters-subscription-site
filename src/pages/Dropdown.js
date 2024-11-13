@@ -1,13 +1,12 @@
 import { useState } from "react";
 import React from "react";
 
-const Dropdown = ({ options, questions }) => {
+const Dropdown = ({ options, questions, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
+  const [selectedOption, setSelectedOption] = useState("OPTION");
 
-  const handleOptionClick = (option) => {
-    setSelectedOption(option);
-    // setIsOpen(false);
+  const handleOptionClick = (option, event) => {
+    setSelectedOption(option.value);
   };
 
   const toggleDropdown = () => {
@@ -58,11 +57,15 @@ const Dropdown = ({ options, questions }) => {
         </div>
       </div>
       {isOpen && (
-        <ul className=" flex flex-col gap-2 lg:gap-[23px] md:flex-row md:gap-[10px] ">
+        <ul
+          className=" flex flex-col gap-2 lg:gap-[23px] md:flex-row md:gap-[10px]"
+          onClick={onChange(selectedOption)}>
           {options.map((option) => (
             <li
               key={option.value}
-              onClick={() => handleOptionClick(option)}
+              onClick={() => {
+                handleOptionClick(option);
+              }}
               className="flex flex-col bg-[#F4F1EB] rounded-lg py-6 px-[25px] md:pt-[32px] md:pb-[84px] gap-2 text-customgrayishblue md:flex-1 hover:bg-[#FDD6BA] hover:text-white ">
               <span className="text-2xl font-black font-fraunces leading-loos">
                 {option.label}
@@ -74,7 +77,6 @@ const Dropdown = ({ options, questions }) => {
           ))}
         </ul>
       )}
-      {/* <p>{selectedOption ? selectedOption.label : null}</p> */}
     </div>
   );
 };
