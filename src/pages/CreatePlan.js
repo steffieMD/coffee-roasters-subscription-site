@@ -306,7 +306,7 @@ const CreatePlan = () => {
           <div className="fixed px-6 md:px-0 pt-[35px] md:pt-0 z-10 left-0 top-0 w-full h-full overflow-auto bg-opacity-50 bg-black flex justify-center items-center flex-col">
             {" "}
             <section className="bg-customeggwhite md:w-[70.3%] xl:w-[37.5%] text-[#83888f] mb-14 md:mb-10 rounded-lg">
-              <div className="bg-customdarkgrey rounded-lg text-white px-6 md:px-14 py-7">
+              <div className="bg-customdarkgrey rounded-lg text-white px-6 md:px-14 py-7 rounded-b-none">
                 <span className="text-[28px] font-black font-fraunces leading-loose capitalize">
                   order summary
                 </span>
