@@ -240,59 +240,61 @@ const CreatePlan = () => {
               ))}
             </div>
           </div>
-          <div className="w-full flex flex-col gap-[88px]">
-            <Dropdown
-              options={options1}
-              questions={questions[0]}
-              onChange={handlePreferences}
-              optionClicked={0}
-              handleOptionClicked={handleOptionClicked}
-            />
-            <Dropdown
-              options={options2}
-              questions={questions[1]}
-              onChange={handleBeanTypes}
-              optionClicked={1}
-              handleOptionClicked={handleOptionClicked}
-            />
-            <Dropdown
-              options={options3}
-              questions={questions[2]}
-              onChange={handleQuantity}
-              optionClicked={2}
-              handleOptionClicked={handleOptionClicked}
-            />
-            <Dropdown
-              options={options4}
-              questions={questions[3]}
-              onChange={handleGrindOption}
-              optionClicked={3}
-              handleOptionClicked={handleOptionClicked}
-            />
-            <Dropdown
-              options={options5}
-              questions={questions[4]}
-              onChange={handleDelivery}
-              optionClicked={4}
-              handleOptionClicked={handleOptionClicked}
-            />
+          <div>
+            <div className="w-full flex flex-col gap-[88px]">
+              <Dropdown
+                options={options1}
+                questions={questions[0]}
+                onChange={handlePreferences}
+                optionClicked={0}
+                handleOptionClicked={handleOptionClicked}
+              />
+              <Dropdown
+                options={options2}
+                questions={questions[1]}
+                onChange={handleBeanTypes}
+                optionClicked={1}
+                handleOptionClicked={handleOptionClicked}
+              />
+              <Dropdown
+                options={options3}
+                questions={questions[2]}
+                onChange={handleQuantity}
+                optionClicked={2}
+                handleOptionClicked={handleOptionClicked}
+              />
+              <Dropdown
+                options={options4}
+                questions={questions[3]}
+                onChange={handleGrindOption}
+                optionClicked={3}
+                handleOptionClicked={handleOptionClicked}
+              />
+              <Dropdown
+                options={options5}
+                questions={questions[4]}
+                onChange={handleDelivery}
+                optionClicked={4}
+                handleOptionClicked={handleOptionClicked}
+              />
+            </div>
+            <section className="bg-customdarkgrey rounded-[10px] px-[25px] py-[32px] text-white mt-[84px] mb-14 md:mb-10">
+              <span className="text-base font-normal font-barlow uppercase leading-relaxed">
+                order summary
+              </span>
+              <p className="text-2xl font-black font-fraunces leading-10">
+                “I drink my coffee as{" "}
+                <span className="text-bluelagoon">{preferences}</span>, with a{" "}
+                <span className="text-bluelagoon">{beanType}</span> type of
+                bean. <span className="text-bluelagoon">{quantity}</span> ground
+                ala <span className="text-bluelagoon">{grindOption}</span>, sent
+                to me <span className="text-bluelagoon">{delivery}</span>
+                .”
+              </p>
+            </section>
           </div>
         </section>
 
-        <section className="bg-customdarkgrey rounded-[10px] px-[25px] py-[32px] text-white mb-14 md:mb-10">
-          <span className="text-base font-normal font-barlow uppercase leading-relaxed">
-            order summary
-          </span>
-          <p className="text-2xl font-black font-fraunces leading-10">
-            “I drink my coffee as{" "}
-            <span className="text-bluelagoon">{preferences}</span>, with a{" "}
-            <span className="text-bluelagoon">{beanType}</span> type of bean.{" "}
-            <span className="text-bluelagoon">{quantity}</span> ground ala{" "}
-            <span className="text-bluelagoon">{grindOption}</span>, sent to me{" "}
-            <span className="text-bluelagoon">{delivery}</span>
-            .”
-          </p>
-        </section>
         <div className="flex md:justify-center lg:justify-end">
           <button
             className="bg-[#0E8784] px-[31px] pt-[15px] pb-[16px] rounded-md font-fraunces text-lg font-[900] text-customeggwhite hover:bg-hovergreen mb-[120px] md:mb-[144px] lg:mb-[168px]"
