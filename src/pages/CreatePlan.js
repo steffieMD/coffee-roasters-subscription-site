@@ -103,17 +103,25 @@ const CreatePlan = () => {
     },
   ];
 
+  const sidebar = [
+    { number: "01", opt: "Preferences" },
+    { number: "02", opt: "Bean Type" },
+    { number: "03", opt: "Quantity" },
+    { number: "04", opt: "Grind Option" },
+    { number: "05", opt: "Deliveries" },
+  ];
+
   const [preferences, setPreferences] = useState("Capsule");
   const [beanType, setBeanType] = useState("Single Origin");
   const [quantity, setQuantity] = useState("250g");
   const [grindOption, setGrindOption] = useState("Wholebean");
   const [delivery, setDelivery] = useState("Every week");
   const [modalStyle, setModalStyle] = useState("hidden");
-  const [activePreference, setActivePreference] = useState(false);
-  const [activeBeanType, setActiveBeanType] = useState(false);
-  const [activeQuantity, setActiveQuantity] = useState(false);
-  const [activeGrindOption, setActiveGrindOption] = useState(false);
-  const [activeDelivery, setActiveDelivery] = useState(false);
+  const [optionClicked, setOptionClicked] = useState(0);
+
+  const handleOptionClicked = (num) => {
+    setOptionClicked(num);
+  };
 
   const displayModal = () => {
     if (modalStyle !== "block") setModalStyle("block");
@@ -123,29 +131,24 @@ const CreatePlan = () => {
     if (modalStyle !== "hidden") setModalStyle("hidden");
   };
 
-  const handlePreferences = (option) => {
+  function handlePreferences(option) {
     setPreferences(option);
-    setActivePreference(true);
-  };
+  }
 
   const handleBeanTypes = (option) => {
     setBeanType(option);
-    setActiveBeanType(true);
   };
 
   const handleQuantity = (option) => {
     setQuantity(option);
-    setActiveQuantity(true);
   };
 
   const handleGrindOption = (option) => {
     setGrindOption(option);
-    setActiveGrindOption(true);
   };
 
   const handleDelivery = (option) => {
     setDelivery(option);
-    setActiveDelivery(true);
   };
 
   return (
@@ -214,28 +217,27 @@ const CreatePlan = () => {
         </section>
         <section className="flex xl:gap-[125px] mb-[114px]">
           <div className="inline-block">
-            <div className="text-customgrayishblue opacity-45 text-2xl font-black font-fraunces leading-loose   hidden xl:flex xl:flex-col gap-6">
-              <div className="flex gap-6 border-b-2 border-customdarkgrey border-opacity-55 xl:pr-8">
-                <span>01</span>
-                <span>Preferences</span>
-              </div>
-
-              <div className="flex gap-6 border-b-2 border-customdarkgrey border-opacity-55 ">
-                <span>02</span>
-                <span>Bean Type</span>
-              </div>
-              <div className="flex gap-6 border-b-2 border-customdarkgrey border-opacity-55 ">
-                <span>03</span>
-                <span>Quantity</span>
-              </div>
-              <div className="flex gap-6 border-b-2 border-customdarkgrey border-opacity-55 ">
-                <span>04</span>
-                <span className="text-nowrap">Grind Option</span>
-              </div>
-              <div className="flex gap-6 border-b-2 border-customdarkgrey border-opacity-55 ">
-                <span>05</span>
-                <span>Deliveries</span>
-              </div>
+            <div className="  text-2xl font-black font-fraunces leading-loose hidden xl:flex xl:flex-col gap-6">
+              {sidebar.map((side, i) => (
+                <div
+                  className="flex gap-6 border-b-2 border-customdarkgrey border-opacity-55 xl:pr-8 text-nowrap"
+                  onClick={() => setOptionClicked(i)}>
+                  <span
+                    className={` ${
+                      i === optionClicked ? "text-bluelagoon" : "text-[#A3A8AE]"
+                    } `}>
+                    {side.number}
+                  </span>
+                  <span
+                    className={
+                      i === optionClicked
+                        ? "text-customgrayishblue"
+                        : "text-[#A3A8AE]"
+                    }>
+                    {side.opt}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
           <div className="w-full flex flex-col gap-[88px]">
@@ -243,26 +245,36 @@ const CreatePlan = () => {
               options={options1}
               questions={questions[0]}
               onChange={handlePreferences}
+              optionClicked={0}
+              handleOptionClicked={handleOptionClicked}
             />
             <Dropdown
               options={options2}
               questions={questions[1]}
               onChange={handleBeanTypes}
+              optionClicked={1}
+              handleOptionClicked={handleOptionClicked}
             />
             <Dropdown
               options={options3}
               questions={questions[2]}
               onChange={handleQuantity}
+              optionClicked={2}
+              handleOptionClicked={handleOptionClicked}
             />
             <Dropdown
               options={options4}
               questions={questions[3]}
               onChange={handleGrindOption}
+              optionClicked={3}
+              handleOptionClicked={handleOptionClicked}
             />
             <Dropdown
               options={options5}
               questions={questions[4]}
               onChange={handleDelivery}
+              optionClicked={4}
+              handleOptionClicked={handleOptionClicked}
             />
           </div>
         </section>

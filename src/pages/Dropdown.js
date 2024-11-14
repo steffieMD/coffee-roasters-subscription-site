@@ -1,7 +1,13 @@
 import { useState } from "react";
 import React from "react";
 
-const Dropdown = ({ options, questions, onChange }) => {
+const Dropdown = ({
+  options,
+  questions,
+  onChange,
+  optionClicked,
+  handleOptionClicked,
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("OPTION");
 
@@ -11,6 +17,7 @@ const Dropdown = ({ options, questions, onChange }) => {
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+    handleOptionClicked(optionClicked);
   };
 
   const handleArrowChange = (open) => {
@@ -50,7 +57,7 @@ const Dropdown = ({ options, questions, onChange }) => {
     <div className="relative inline-block">
       <div onClick={toggleDropdown}>
         <div className="flex justify-between mb-14">
-          <button className="text-[#83888f] text-2xl font-black font-fraunces leading-7 md:text-[32px] md:leading-[48px] lg:text-[40px] text-left">
+          <button className="text-[#83888f] text-2xl font-black font-fraunces leading-7 md:text-[32px] md:leading-[48px] lg:text-[40px] text-left hover:text-[#A3A8AE]">
             {questions}
           </button>
           <div className="cursor-pointer">{handleArrowChange(isOpen)}</div>
@@ -66,7 +73,11 @@ const Dropdown = ({ options, questions, onChange }) => {
               onClick={() => {
                 handleOptionClick(option);
               }}
-              className="flex flex-col bg-[#F4F1EB] rounded-lg py-6 px-[25px] md:pt-[32px] md:pb-[84px] gap-2 text-customgrayishblue md:flex-1 hover:bg-[#FDD6BA] hover:text-white ">
+              className={`flex flex-col  rounded-lg py-6 px-[25px] md:pt-[32px] md:pb-[84px] gap-2 text-customgrayishblue md:flex-1 hover:bg-[#FDD6BA] hover:text-white ${
+                selectedOption === option.value
+                  ? "bg-bluelagoon"
+                  : "bg-[#F4F1EB]"
+              }`}>
               <span className="text-2xl font-black font-fraunces leading-loos">
                 {option.label}
               </span>
