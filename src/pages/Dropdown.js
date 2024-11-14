@@ -9,7 +9,7 @@ const Dropdown = ({
   handleOptionClicked,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("OPTION");
+  const [selectedOption, setSelectedOption] = useState("_____");
 
   const handleOptionClick = (option, event) => {
     setSelectedOption(option.value);
