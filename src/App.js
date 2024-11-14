@@ -5,13 +5,22 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import CreatePlan from "./pages/CreatePlan";
 import Footer from "./Footer";
+import { useState } from "react";
 
 function App() {
+  const [activeLink, setActiveLink] = useState("/");
+  // const activeLink = "/";
+
+  const handleActiveLink = (link) => {
+    setActiveLink(link);
+    console.log(link);
+  };
+
   return (
     <Router>
       <div className="App ">
         <div className="px-6 md:px-10 lg:px-20 flex flex-col items-center ">
-          <Navbar />
+          <Navbar activeLink={activeLink} handleActiveLink={handleActiveLink} />
 
           <Routes>
             <Route exact path="/" element={<Home />} />

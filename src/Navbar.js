@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ activeLink, handleActiveLink }) {
   const [style, setStyle] = useState("hidden md:block");
   const [svg, setSvg] = useState(
     <svg
@@ -18,6 +18,12 @@ function Navbar() {
       />
     </svg>
   );
+
+  const links = [
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About" },
+    { path: "/createplan", label: "Create Your Plan" },
+  ];
 
   const toggleNav = () => {
     if (style !== "hidden md:block") {
@@ -118,15 +124,20 @@ function Navbar() {
         bg-gradient-to-b  from-0% from-customeggwhite to-customlightgray to-[55.95%] md:bg-none
         justify-start items-center pt-16 md:pt-0 h-[100vh] md:h-full text-[#333D4B] md:text-[#83888F] font-[900] md:font-[700] leading-[15px] text-2xl md:text-[12px] gap-8
         ">
-          <li className="hover:text-[#83888F] md:hover:text-customgrayishblue">
-            <Link to="/">home</Link>
-          </li>
-          <li className="hover:text-[#83888F] md:hover:text-customgrayishblue">
-            <Link to="/about">about us</Link>
-          </li>
-          <li className="hover:text-[#83888F] md:hover:text-customgrayishblue">
-            <Link to="/createplan">create your plan</Link>
-          </li>
+          {links.map((link) => (
+            <li
+              key={link.path}
+              className="hover:text-[#83888F] md:hover:text-customgrayishblue"
+              onClick={() => handleActiveLink(link.path)}>
+              <Link
+                to={link.path}
+                className={`${
+                  link.path === activeLink ? "md:text-customgrayishblue" : ""
+                }`}>
+                {link.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

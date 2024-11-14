@@ -109,11 +109,11 @@ const CreatePlan = () => {
   const [grindOption, setGrindOption] = useState("Wholebean");
   const [delivery, setDelivery] = useState("Every week");
   const [modalStyle, setModalStyle] = useState("hidden");
-  const [activePreference, setActivePreference] = useState("font-normal");
-  const [activeBeanType, setActiveBeanType] = useState("font-normal");
-  const [activeQuantity, setActiveQuantity] = useState("font-normal");
-  const [activeGrindOption, setActiveGrindOption] = useState("font-normal");
-  const [activeDelivery, setActiveDelivery] = useState("font-normal");
+  const [activePreference, setActivePreference] = useState(false);
+  const [activeBeanType, setActiveBeanType] = useState(false);
+  const [activeQuantity, setActiveQuantity] = useState(false);
+  const [activeGrindOption, setActiveGrindOption] = useState(false);
+  const [activeDelivery, setActiveDelivery] = useState(false);
 
   const displayModal = () => {
     if (modalStyle !== "block") setModalStyle("block");
@@ -125,27 +125,27 @@ const CreatePlan = () => {
 
   const handlePreferences = (option) => {
     setPreferences(option);
-    setActivePreference("text-black");
+    setActivePreference(true);
   };
 
   const handleBeanTypes = (option) => {
     setBeanType(option);
-    setActiveBeanType("text-black");
+    setActiveBeanType(true);
   };
 
   const handleQuantity = (option) => {
     setQuantity(option);
-    setActiveQuantity("text-black");
+    setActiveQuantity(true);
   };
 
   const handleGrindOption = (option) => {
     setGrindOption(option);
-    setActiveGrindOption("text-black");
+    setActiveGrindOption(true);
   };
 
   const handleDelivery = (option) => {
     setDelivery(option);
-    setActiveDelivery("text-black");
+    setActiveDelivery(true);
   };
 
   return (
