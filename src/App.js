@@ -6,6 +6,7 @@ import About from "./pages/About";
 import CreatePlan from "./pages/CreatePlan";
 import Footer from "./Footer";
 import { useState } from "react";
+import NoPage from "./pages/NoPage";
 
 function App() {
   const [activeLink, setActiveLink] = useState("/");
@@ -18,15 +19,17 @@ function App() {
 
   return (
     <Router>
-      <div className="App ">
-        <div className="px-6 md:px-10 lg:px-20 flex flex-col items-center ">
+      <div>
+        <div className="px-6 md:px-10 lg:px-20 flex flex-col items-center h-[100vh] justify-between">
           <Navbar activeLink={activeLink} handleActiveLink={handleActiveLink} />
+          <NoPage />
 
-          <Routes>
+          {/* <Routes>
             <Route exact path="/" element={<Home />} />
             <Route exact path="/about" element={<About />} />
             <Route exact path="/createplan" element={<CreatePlan />} />
-          </Routes>
+            <Route path="*" element={<NoPage />} />
+          </Routes> */}
           <Footer />
         </div>
       </div>

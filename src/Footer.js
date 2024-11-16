@@ -6,7 +6,7 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
   return (
-    <footer className=" flex flex-col py-[54px] font-barlow md:font-barlow md:justify-center items-center bg-customdarkgrey lg:flex-row lg:px-[85px] w-full max-w-[1280px]">
+    <footer className=" flex flex-col py-[54px] font-barlow md:font-barlow md:justify-center items-center bg-customdarkgrey lg:flex-row lg:px-[85px] w-full max-w-[1280px] bottom-0 align-bottom">
       <Link
         to="/"
         className="mb-12 md:mb-8 flex justify-center items-center lg:mb-0 ">
