@@ -14,7 +14,6 @@ function App() {
 
   const handleActiveLink = (link) => {
     setActiveLink(link);
-    console.log(link);
   };
 
   return (
